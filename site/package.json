@@ -1,0 +1,20 @@
+{
+  "name": "how-chinese-politics-works-site",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=24" },
+  "scripts": {
+    "prepare": "node scripts/prepare.mjs",
+    "dev": "npm run prepare && vitepress dev",
+    "build": "npm run prepare && vitepress build",
+    "preview": "vitepress preview --host 127.0.0.1",
+    "test": "node --test --test-isolation=none scripts/content.test.mjs",
+    "check": "node scripts/check-dist.mjs"
+  },
+  "overrides": { "vite": "6.4.3" },
+  "devDependencies": {
+    "@viz-js/viz": "3.25.0",
+    "vitepress": "1.6.4",
+    "markdown-it-footnote": "4.0.0"
+  }
+}
