@@ -1,0 +1,23 @@
+name: 勘误
+description: 报告文字、事实、来源或格式错误
+title: '[勘误] '
+body:
+  - type: input
+    id: location
+    attributes:
+      label: 位置
+      description: 章节、小节、段落或页面链接；如为下载版，请注明格式及版本。
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: 原文与建议修改
+      description: 引用相关句子，说明问题和建议；不确定时请明确注明。
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 核查依据
+      description: 涉及事实时，请提供可访问的原始来源、发布日期和有关段落。

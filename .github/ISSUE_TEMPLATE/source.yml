@@ -1,0 +1,24 @@
+name: 资料补充
+description: 提供可核查的公开资料
+title: '[资料补充] '
+body:
+  - type: input
+    id: chapter
+    attributes:
+      label: 对应章节或问题
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: 来源与日期
+      description: 请提供链接、资料标题、发布机构和日期；区分事件发生日与报道日。
+    validations:
+      required: true
+  - type: textarea
+    id: relevance
+    attributes:
+      label: 可以补充或修正什么
+      description: 请说明材料直接支持的事实及其局限。书稿现实资料截止2026年9月29日，后续变化可作为更新线索。
+    validations:
+      required: true

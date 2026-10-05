@@ -1,0 +1,15 @@
+name: 阅读建议
+description: 反馈不易理解的表达、结构或阅读体验
+title: '[阅读建议] '
+body:
+  - type: input
+    id: location
+    attributes:
+      label: 章节、页面或阅读设备
+  - type: textarea
+    id: feedback
+    attributes:
+      label: 遇到的问题及建议
+      description: 哪一段不易理解？希望增加什么解释？如涉及页面显示，请说明设备和浏览器。
+    validations:
+      required: true
