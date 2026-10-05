@@ -4,3 +4,9 @@ __pycache__/
 .DS_Store
 node_modules/
 .venv/
+site/*.md
+!site/README.md
+site/public/figures/
+site/.vitepress/navigation.json
+site/.vitepress/cache/
+site/.vitepress/dist/
