@@ -1,0 +1,35 @@
+:root {
+  --vp-c-brand-1: #365c58;
+  --vp-c-brand-2: #47716b;
+  --vp-c-brand-3: #365c58;
+  --vp-c-brand-soft: rgba(54, 92, 88, .12);
+  --vp-c-bg: #faf9f5;
+  --vp-font-family-base: "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+  --vp-layout-max-width: 1440px;
+}
+.dark {
+  --vp-c-brand-1: #9cc6bb;
+  --vp-c-brand-2: #b4d6cc;
+  --vp-c-brand-3: #608f83;
+  --vp-c-bg: #1c2020;
+}
+.VPDoc.has-aside .content-container { max-width: 740px !important; }
+.vp-doc { font-size: 17px; line-height: 1.9; }
+.vp-doc p, .vp-doc li { line-height: 1.9; }
+.vp-doc h1 { line-height: 1.5; letter-spacing: 0; }
+.vp-doc h2 { line-height: 1.6; }
+.vp-doc a { text-underline-offset: 4px; }
+.vp-doc img { max-width: 100%; height: auto; margin: 24px auto; background: white; border-radius: 6px; }
+.vp-doc table { max-width: 100%; overflow-x: auto; font-size: 15px; }
+.vp-doc .footnotes { font-size: 14px; line-height: 1.8; overflow-wrap: anywhere; }
+.vp-doc .footnote-item p { line-height: 1.8; }
+.vp-doc .footnote-ref a, .vp-doc .footnote-backref { padding: 3px; }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--vp-c-brand-1); outline-offset: 3px; }
+.VPHero .name { font-size: 48px; line-height: 1.3; }
+.VPHero .text { font-size: 36px; line-height: 1.5; }
+@media (max-width: 640px) {
+  .vp-doc { font-size: 17px; }
+  .vp-doc h1 { font-size: 27px; }
+  .VPHero .name { font-size: 34px; }
+  .VPHero .text { font-size: 26px; }
+}
