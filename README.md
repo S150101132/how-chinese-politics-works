@@ -3,7 +3,7 @@
 > **一本给普通读者看的中国政治运行说明书。**  
 > 从制度、人物与现实事件出发，理解当代中国的机构、干部、政策与监督机制。
 
-[开始阅读](阅读入口.md) · [PDF](交付/中国政治是怎么运转的.pdf) · [EPUB](交付/中国政治是怎么运转的.epub) · [Word](交付/中国政治是怎么运转的.docx)
+[开始阅读](https://s150101132.github.io/how-chinese-politics-works/) · [PDF](https://github.com/S150101132/how-chinese-politics-works/releases/download/v1.0.0/how-chinese-politics-works.pdf) · [EPUB](https://github.com/S150101132/how-chinese-politics-works/releases/download/v1.0.0/how-chinese-politics-works.epub) · [Word](https://github.com/S150101132/how-chinese-politics-works/releases/download/v1.0.0/how-chinese-politics-works.docx) · [第一版下载与校验](https://github.com/S150101132/how-chinese-politics-works/releases/tag/v1.0.0)
 
 如果这个项目对你有帮助，欢迎 **Star ⭐** 收藏，也欢迎通过 [Issue](https://github.com/S150101132/how-chinese-politics-works/issues) 提交勘误、补充来源或阅读反馈。
 
@@ -40,16 +40,17 @@
 
 完整内容包括 **导读、24章正文和6个附录**。
 
-→ [查看完整目录与章节入口](阅读入口.md)
+→ [查看完整目录与章节入口](https://s150101132.github.io/how-chinese-politics-works/contents)
 
 ## 阅读格式
 
 | 格式 | 适合场景 |
 |---|---|
-| [在线 Markdown](阅读入口.md) | 在 GitHub 上直接逐章阅读 |
-| [PDF](交付/中国政治是怎么运转的.pdf) | 固定版式、打印与保存 |
-| [EPUB](交付/中国政治是怎么运转的.epub) | 手机、平板和电子阅读器 |
-| [Word](交付/中国政治是怎么运转的.docx) | 编辑、批注与二次整理 |
+| [在线阅读](https://s150101132.github.io/how-chinese-politics-works/) | 逐章阅读、全文搜索，适配手机 |
+| [Markdown 源稿](阅读入口.md) | 在 GitHub 上查看原始正文 |
+| [PDF](https://github.com/S150101132/how-chinese-politics-works/releases/download/v1.0.0/how-chinese-politics-works.pdf) | 固定版式、打印与保存 |
+| [EPUB](https://github.com/S150101132/how-chinese-politics-works/releases/download/v1.0.0/how-chinese-politics-works.epub) | 手机、平板和电子阅读器 |
+| [Word](https://github.com/S150101132/how-chinese-politics-works/releases/download/v1.0.0/how-chinese-politics-works.docx) | 编辑、批注与二次整理 |
 
 三种下载格式包含同一版书稿；EPUB 支持目录、注释跳转与回链。图中的箭头表示已标明的制度关系或程序先后，不表示个人官职排名。
 
@@ -79,7 +80,7 @@ AI 协作起草、独立审读、统稿方式及勘误规则见 [附录F：版�
 
 ## 勘误与参与
 
-发现问题时，欢迎[提交 Issue](https://github.com/S150101132/how-chinese-politics-works/issues/new)。为了方便核查，最好包含：
+发现问题时，欢迎[提交 Issue](https://github.com/S150101132/how-chinese-politics-works/issues/new/choose)。为了方便核查，最好包含：
 
 1. 章节和具体原句；
 2. 你认为存在的问题；
