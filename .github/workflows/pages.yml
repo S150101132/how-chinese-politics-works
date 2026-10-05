@@ -1,0 +1,45 @@
+name: Deploy reading site to Pages
+
+on:
+  push:
+    branches: [main]
+    paths: ['site/**', '书稿/**', '图表/**', '.github/workflows/pages.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: site/package-lock.json
+      - run: npm ci --prefix site
+      - run: npm test --prefix site
+      - run: npm run build --prefix site
+      - run: npm run check --prefix site
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site/.vitepress/dist
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
