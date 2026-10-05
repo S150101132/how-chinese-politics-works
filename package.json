@@ -1,0 +1,14 @@
+{
+  "name": "how-chinese-politics-works",
+  "private": true,
+  "description": "Reading edition and reproducible book preparation",
+  "type": "module",
+  "engines": { "node": ">=24" },
+  "scripts": { "prepare-book": "node 制作/prepare-book.mjs" },
+  "dependencies": {
+    "@viz-js/viz": "3.25.0",
+    "marked": "17.0.5",
+    "sharp": "0.35.4"
+  },
+  "devDependencies": { "playwright": "1.62.1" }
+}
