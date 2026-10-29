@@ -210,8 +210,8 @@ for text in ['PAGE','NUMPAGES']:
 p=doc.add_paragraph('中国政治是怎么运转的',style='Title')
 p.paragraph_format.space_before=Pt(100)
 doc.add_paragraph('从制度、人物与现实事件读懂当代中国')
-doc.add_paragraph('第一版 1.0')
-doc.add_paragraph('现实资料截止 2026年9月29日')
+doc.add_paragraph('第一版 1.1（2026年10月29日修订）')
+doc.add_paragraph('现实资料截止 2026年9月29日；少数后续变化以“v1.1补记”标出')
 doc.add_paragraph('本书通过真实人物和事件解释机构、程序与制度变化，帮助普通读者读懂新闻中的动作，并分清事实、解释和未知。')
 doc.add_paragraph('注释保留在各章末尾；正文中的编号可跳转到依据，注释中的“返回”可跳回首次引用。')
 doc.add_page_break()
@@ -240,7 +240,7 @@ doc.core_properties.subject='从制度、人物与现实事件读懂当代中国
 doc.core_properties.author=''
 doc.core_properties.last_modified_by=''
 doc.core_properties.language='zh-CN'
-doc.core_properties.comments='现实资料截止2026年9月29日；制作方式见附录F。'
+doc.core_properties.comments='版本1.1，2026年10月29日修订；现实资料截止2026年9月29日，v1.1补记见附录F。'
 output=OUT/'中国政治是怎么运转的.docx'
 doc.save(output)
 print(json.dumps({'output':str(output),'sections':len(BOOK),'paragraphs':len(doc.paragraphs),'tables':len(doc.tables),'images':len(doc.inline_shapes)},ensure_ascii=False))

@@ -69,6 +69,6 @@ export default defineConfig({
         }
       }
     },
-    footer: { message: '现实资料截止：2026年9月29日 · 免费阅读不代表授予开放版权许可' }
+    footer: { message: 'v1.1 · 现实资料截止：2026年9月29日 · 免费阅读不代表授予开放版权许可' }
   }
 });
