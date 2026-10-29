@@ -66,7 +66,7 @@ features:
 
 ## 读前说明
 
-全书包含导读、24章正文和6个附录。现实资料截止：**2026年9月29日**。人物职务与制度变化，请结合章末注释的核查时点阅读。
+全书包含导读、24章正文和6个附录。现实资料截止：**2026年9月29日**；v1.1在第2、3、21、22章补记了截止日后的少数变化。人物职务与制度变化，请结合章末注释的核查时点阅读。
 
 这本书不写无法确认的政坛内幕。每章保留资料来源，明确区分**事实、解释与未知**。
 
@@ -74,5 +74,5 @@ features:
 
 发现错误或有资料补充，欢迎[提交反馈](https://github.com/S150101132/how-chinese-politics-works/issues/new/choose)。
 `);
-fs.writeFileSync(path.join(site, 'downloads.md'), `# 下载电子书\n\n三种格式与仓库交付版一致，现实资料截止：**2026年9月29日**。\n\n- [下载 PDF](https://github.com/S150101132/how-chinese-politics-works/releases/download/v1.0.0/how-chinese-politics-works.pdf)\n- [下载 EPUB](https://github.com/S150101132/how-chinese-politics-works/releases/download/v1.0.0/how-chinese-politics-works.epub)\n- [下载 Word](https://github.com/S150101132/how-chinese-politics-works/releases/download/v1.0.0/how-chinese-politics-works.docx)\n- [SHA256 校验文件](https://github.com/S150101132/how-chinese-politics-works/releases/download/v1.0.0/SHA256SUMS)\n\n正式版本发布后，可在[版本发布页](https://github.com/S150101132/how-chinese-politics-works/releases)查看版本说明及附件。\n\n免费阅读不代表授予开放版权许可，请保留书稿及引用来源的版权声明。\n`);
+fs.writeFileSync(path.join(site, 'downloads.md'), `# 下载电子书\n\n两种格式与仓库交付版一致，现实资料截止：**2026年9月29日**。\n\n- [下载 PDF](https://github.com/S150101132/how-chinese-politics-works/releases/latest/download/how-chinese-politics-works.pdf)\n- [下载 Word](https://github.com/S150101132/how-chinese-politics-works/releases/latest/download/how-chinese-politics-works.docx)\n- [SHA256 校验文件](https://github.com/S150101132/how-chinese-politics-works/releases/latest/download/SHA256SUMS)\n\n当前版本为v1.1（2026年10月29日修订）。版本说明及全部附件见[最新发布页](https://github.com/S150101132/how-chinese-politics-works/releases/latest)，历史版本见[全部版本](https://github.com/S150101132/how-chinese-politics-works/releases)。\n\n免费阅读不代表授予开放版权许可，请保留书稿及引用来源的版权声明。\n`);
 console.log(`Generated ${entries.length} manuscript pages, homepage, contents and downloads.`);

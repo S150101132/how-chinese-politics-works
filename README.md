@@ -3,7 +3,7 @@
 > **一本给普通读者看的中国政治运行说明书。**  
 > 从制度、人物与现实事件出发，理解当代中国的机构、干部、政策与监督机制。
 
-[开始阅读](https://s150101132.github.io/how-chinese-politics-works/) · [PDF](https://github.com/S150101132/how-chinese-politics-works/releases/download/v1.0.0/how-chinese-politics-works.pdf) · [EPUB](https://github.com/S150101132/how-chinese-politics-works/releases/download/v1.0.0/how-chinese-politics-works.epub) · [Word](https://github.com/S150101132/how-chinese-politics-works/releases/download/v1.0.0/how-chinese-politics-works.docx) · [第一版下载与校验](https://github.com/S150101132/how-chinese-politics-works/releases/tag/v1.0.0)
+[开始阅读](https://s150101132.github.io/how-chinese-politics-works/) · [PDF](https://github.com/S150101132/how-chinese-politics-works/releases/latest/download/how-chinese-politics-works.pdf) · [Word](https://github.com/S150101132/how-chinese-politics-works/releases/latest/download/how-chinese-politics-works.docx) · [下载与校验](https://github.com/S150101132/how-chinese-politics-works/releases/latest)
 
 如果这个项目对你有帮助，欢迎 **Star ⭐** 收藏，也欢迎通过 [Issue](https://github.com/S150101132/how-chinese-politics-works/issues) 提交勘误、补充来源或阅读反馈。
 
@@ -48,11 +48,10 @@
 |---|---|
 | [在线阅读](https://s150101132.github.io/how-chinese-politics-works/) | 逐章阅读、全文搜索，适配手机 |
 | [Markdown 源稿](阅读入口.md) | 在 GitHub 上查看原始正文 |
-| [PDF](https://github.com/S150101132/how-chinese-politics-works/releases/download/v1.0.0/how-chinese-politics-works.pdf) | 固定版式、打印与保存 |
-| [EPUB](https://github.com/S150101132/how-chinese-politics-works/releases/download/v1.0.0/how-chinese-politics-works.epub) | 手机、平板和电子阅读器 |
-| [Word](https://github.com/S150101132/how-chinese-politics-works/releases/download/v1.0.0/how-chinese-politics-works.docx) | 编辑、批注与二次整理 |
+| [PDF](https://github.com/S150101132/how-chinese-politics-works/releases/latest/download/how-chinese-politics-works.pdf) | 固定版式、打印与保存 |
+| [Word](https://github.com/S150101132/how-chinese-politics-works/releases/latest/download/how-chinese-politics-works.docx) | 编辑、批注与二次整理 |
 
-三种下载格式包含同一版书稿；EPUB 支持目录、注释跳转与回链。图中的箭头表示已标明的制度关系或程序先后，不表示个人官职排名。
+两种下载格式包含同一版书稿；手机阅读推荐在线版。图中的箭头表示已标明的制度关系或程序先后，不表示个人官职排名。
 
 ## 写作原则
 
@@ -62,7 +61,7 @@
 
 重要事实与制度规定尽量提供可核查来源；对于公开材料不能证明的内幕、动机或关系，不用叙事补空白。
 
-本版现实资料截止日为 **2026年9月29日**；查证日期可以更晚。
+本版现实资料截止日为 **2026年9月29日**；查证日期可以更晚。v1.1（2026年10月29日修订）在第2、3、21、22章以“v1.1补记”标出几项截止日后的变化，修订记录见附录F。
 
 历史人物身份、机构设置与制度版本按照事件发生时记录，不用今天的制度倒推过去。
 
@@ -74,7 +73,7 @@ AI 协作起草、独立审读、统稿方式及勘误规则见 [附录F：版�
 - [阅读入口](阅读入口.md)：完整目录与章节导航
 - [资料](资料/)：事实核查、来源与审读记录，是证据源
 - [图表](图表/)：书中原创结构图与示意图
-- [交付](交付/)：PDF、EPUB、Word 等阅读版本
+- [交付](交付/)：PDF、Word 阅读版本
 - [版本存档](版本存档/)：历史版本
 - [制作说明](制作说明.md)：如何更新和重新生成交付文件
 
@@ -87,7 +86,7 @@ AI 协作起草、独立审读、统稿方式及勘误规则见 [附录F：版�
 3. 可核查的来源；
 4. 如果涉及人物或制度变化，请注明日期。
 
-修改人物、规则或案例时，会保留旧事件的历史日期和当时身份，并记录新来源、事实截止日和受影响章节。更新源稿后应同步重建三种阅读格式，避免只修改 Word 而让 Markdown 源稿落后。
+修改人物、规则或案例时，会保留旧事件的历史日期和当时身份，并记录新来源、事实截止日和受影响章节。更新源稿后应同步重建两种下载格式，避免只修改 Word 而让 Markdown 源稿落后。
 
 - [固定写作基准](写作基准.md)
 - [制作与更新说明](制作说明.md)
@@ -104,4 +103,4 @@ AI 协作起草、独立审读、统稿方式及勘误规则见 [附录F：版�
 
 It explains contemporary Chinese political institutions, officials, policymaking, appointments and oversight through public sources, real events and clearly stated evidence boundaries.
 
-The project currently includes an introduction, 24 chapters and 6 appendices, with Markdown, PDF, EPUB and Word editions.
+The project currently includes an introduction, 24 chapters and 6 appendices, with Markdown, PDF and Word editions.
