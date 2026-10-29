@@ -1,0 +1,42 @@
+name: Publish book release
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Release tag, e.g. v1.1.0
+        required: true
+      title:
+        description: Release title
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Verify delivery files and stage assets
+        env:
+          TAG: ${{ inputs.tag }}
+        run: |
+          test -f "制作/release-notes/$TAG.md"
+          cd 交付
+          sha256sum -c SHA256SUMS
+          mkdir -p "$RUNNER_TEMP/assets"
+          cp 中国政治是怎么运转的.pdf "$RUNNER_TEMP/assets/how-chinese-politics-works.pdf"
+          cp 中国政治是怎么运转的.docx "$RUNNER_TEMP/assets/how-chinese-politics-works.docx"
+          cp SHA256SUMS "$RUNNER_TEMP/assets/SOURCE_SHA256SUMS"
+          cd "$RUNNER_TEMP/assets"
+          sha256sum how-chinese-politics-works.pdf how-chinese-politics-works.docx > SHA256SUMS
+          cat SHA256SUMS
+      - name: Create release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ inputs.tag }}
+          TITLE: ${{ inputs.title }}
+        run: |
+          if gh release view "$TAG" >/dev/null 2>&1; then echo "Release $TAG already exists"; exit 1; fi
+          gh release create "$TAG" --target "$GITHUB_SHA" --title "$TITLE" --notes-file "制作/release-notes/$TAG.md" --latest "$RUNNER_TEMP"/assets/*
