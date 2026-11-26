@@ -6,11 +6,14 @@ import { pathToFileURL } from 'node:url';
 const bundled='/home/wangbiao/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules';
 const moduleRoot=process.env.BOOK_NODE_MODULES || (fs.existsSync(path.join(process.cwd(),'node_modules/marked')) ? path.join(process.cwd(),'node_modules') : bundled);
 const require=createRequire(path.join(path.dirname(moduleRoot),'_book_runtime.cjs'));
-const { marked }=await import(pathToFileURL(require.resolve('marked')).href);
+// marked's CommonJS build exposes its API only under `default` when imported from ESM.
+const markedModule=await import(pathToFileURL(require.resolve('marked')).href);
+const marked=markedModule.marked||markedModule.default?.marked;
 const vizModule=await import(pathToFileURL(require.resolve('@viz-js/viz')).href);
 const instance=vizModule.instance || vizModule.default.instance;
 const sharp=(await import(pathToFileURL(require.resolve('sharp')).href)).default;
 
+const SANS=process.env.BOOK_SANS||'Noto Sans CJK SC';
 const root=process.cwd(), tmp=path.join(root,'tmp/book');
 fs.mkdirSync(tmp,{recursive:true});
 fs.mkdirSync(path.join(root,'图表/导出版'),{recursive:true});
@@ -55,7 +58,7 @@ for(let i=0;i<order.length;i++){
       }
       // WASM Graphviz's font metrics do not measure installed CJK fonts.
       // Explicit widths plus twelve-character wrapping keep CJK glyphs inside boxes.
-      const dot='digraph G { graph [rankdir=TB, bgcolor="white", pad="0.25", nodesep="0.35", ranksep="0.25"]; node [shape=box, width=2.75, style="rounded,filled", fillcolor="#f3f4f1", color="#738078", fontname="Noto Sans CJK SC", fontsize=14, margin="0.12,0.10"]; edge [color="#62716c", fontname="Noto Sans CJK SC", fontsize=11]; '+[...nodes].map(([id,label])=>`${id} [label=${quote(label)}];`).join(' ')+' '+edges.map(([a,b,l,d])=>`${a} -> ${b} [label=${quote(wrap(l,8))}${d?', style=dashed':''}];`).join(' ')+' }';
+      const dot='digraph G { graph [rankdir=TB, bgcolor="white", pad="0.25", nodesep="0.35", ranksep="0.25"]; node [shape=box, width=2.75, style="rounded,filled", fillcolor="#f3f4f1", color="#738078", fontname="'+SANS+'", fontsize=14, margin="0.12,0.10"]; edge [color="#62716c", fontname="'+SANS+'", fontsize=11]; '+[...nodes].map(([id,label])=>`${id} [label=${quote(label)}];`).join(' ')+' '+edges.map(([a,b,l,d])=>`${a} -> ${b} [label=${quote(wrap(l,8))}${d?', style=dashed':''}];`).join(' ')+' }';
       // A white glyph outline keeps relation lines from crossing label strokes.
       const svg=viz.renderString(dot,{format:'svg'}).replace(/<g id="edge[\s\S]*?<\/g>/g,g=>g.replace(/<text /g,'<text style="paint-order:stroke;stroke:white;stroke-width:3;stroke-linejoin:round" '));
       const name=`${file.slice(0,4)}-关系图-${++figure}`;
