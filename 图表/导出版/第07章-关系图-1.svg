@@ -13,16 +13,16 @@
 <g id="node1" class="node">
 <title>A</title>
 <path fill="#f3f4f1" stroke="#738078" d="M186,-394.8C186,-394.8 12,-394.8 12,-394.8 6,-394.8 0,-388.8 0,-382.8 0,-382.8 0,-342 0,-342 0,-336 6,-330 12,-330 12,-330 186,-330 186,-330 192,-330 198,-336 198,-342 198,-342 198,-382.8 198,-382.8 198,-388.8 192,-394.8 186,-394.8"/>
-<text xml:space="preserve" text-anchor="middle" x="99" y="-375" font-family="Noto Sans CJK SC" font-size="14.00">2024&#45;09&#45;30</text>
-<text xml:space="preserve" text-anchor="middle" x="99" y="-358.2" font-family="Noto Sans CJK SC" font-size="14.00">中央纪委国家监委</text>
-<text xml:space="preserve" text-anchor="middle" x="99" y="-341.4" font-family="Noto Sans CJK SC" font-size="14.00">审查调查通报</text>
+<text xml:space="preserve" text-anchor="middle" x="99" y="-375" font-family="Noto Sans SC" font-size="14.00">2024&#45;09&#45;30</text>
+<text xml:space="preserve" text-anchor="middle" x="99" y="-358.2" font-family="Noto Sans SC" font-size="14.00">中央纪委国家监委</text>
+<text xml:space="preserve" text-anchor="middle" x="99" y="-341.4" font-family="Noto Sans SC" font-size="14.00">审查调查通报</text>
 </g>
 <!-- B -->
 <g id="node2" class="node">
 <title>B</title>
 <path fill="#f3f4f1" stroke="#738078" d="M186,-312C186,-312 12,-312 12,-312 6,-312 0,-306 0,-300 0,-300 0,-276 0,-276 0,-270 6,-264 12,-264 12,-264 186,-264 186,-264 192,-264 198,-270 198,-276 198,-276 198,-300 198,-300 198,-306 192,-312 186,-312"/>
-<text xml:space="preserve" text-anchor="middle" x="99" y="-292.2" font-family="Noto Sans CJK SC" font-size="14.00">2025&#45;04&#45;07通报</text>
-<text xml:space="preserve" text-anchor="middle" x="99" y="-275.4" font-family="Noto Sans CJK SC" font-size="14.00">双开、涉嫌犯罪移送</text>
+<text xml:space="preserve" text-anchor="middle" x="99" y="-292.2" font-family="Noto Sans SC" font-size="14.00">2025&#45;04&#45;07通报</text>
+<text xml:space="preserve" text-anchor="middle" x="99" y="-275.4" font-family="Noto Sans SC" font-size="14.00">双开、涉嫌犯罪移送</text>
 </g>
 <!-- A&#45;&gt;B -->
 <g id="edge1" class="edge">
@@ -34,8 +34,8 @@
 <g id="node3" class="node">
 <title>C</title>
 <path fill="#f3f4f1" stroke="#738078" d="M186,-246C186,-246 12,-246 12,-246 6,-246 0,-240 0,-234 0,-234 0,-210 0,-210 0,-204 6,-198 12,-198 12,-198 186,-198 186,-198 192,-198 198,-204 198,-210 198,-210 198,-234 198,-234 198,-240 192,-246 186,-246"/>
-<text xml:space="preserve" text-anchor="middle" x="99" y="-226.2" font-family="Noto Sans CJK SC" font-size="14.00">2025&#45;04&#45;22公告</text>
-<text xml:space="preserve" text-anchor="middle" x="99" y="-209.4" font-family="Noto Sans CJK SC" font-size="14.00">最高检此前已决定逮捕</text>
+<text xml:space="preserve" text-anchor="middle" x="99" y="-226.2" font-family="Noto Sans SC" font-size="14.00">2025&#45;04&#45;22公告</text>
+<text xml:space="preserve" text-anchor="middle" x="99" y="-209.4" font-family="Noto Sans SC" font-size="14.00">最高检此前已决定逮捕</text>
 </g>
 <!-- B&#45;&gt;C -->
 <g id="edge2" class="edge">
@@ -47,8 +47,8 @@
 <g id="node4" class="node">
 <title>D</title>
 <path fill="#f3f4f1" stroke="#738078" d="M186,-180C186,-180 12,-180 12,-180 6,-180 0,-174 0,-168 0,-168 0,-144 0,-144 0,-138 6,-132 12,-132 12,-132 186,-132 186,-132 192,-132 198,-138 198,-144 198,-144 198,-168 198,-168 198,-174 192,-180 186,-180"/>
-<text xml:space="preserve" text-anchor="middle" x="99" y="-160.2" font-family="Noto Sans CJK SC" font-size="14.00">2025&#45;07&#45;24报道</text>
-<text xml:space="preserve" text-anchor="middle" x="99" y="-143.4" font-family="Noto Sans CJK SC" font-size="14.00">武汉市检察院近日已起诉</text>
+<text xml:space="preserve" text-anchor="middle" x="99" y="-160.2" font-family="Noto Sans SC" font-size="14.00">2025&#45;07&#45;24报道</text>
+<text xml:space="preserve" text-anchor="middle" x="99" y="-143.4" font-family="Noto Sans SC" font-size="14.00">武汉市检察院近日已起诉</text>
 </g>
 <!-- C&#45;&gt;D -->
 <g id="edge3" class="edge">
@@ -60,8 +60,8 @@
 <g id="node5" class="node">
 <title>E</title>
 <path fill="#f3f4f1" stroke="#738078" d="M186,-114C186,-114 12,-114 12,-114 6,-114 0,-108 0,-102 0,-102 0,-78 0,-78 0,-72 6,-66 12,-66 12,-66 186,-66 186,-66 192,-66 198,-72 198,-78 198,-78 198,-102 198,-102 198,-108 192,-114 186,-114"/>
-<text xml:space="preserve" text-anchor="middle" x="99" y="-94.2" font-family="Noto Sans CJK SC" font-size="14.00">2025&#45;09&#45;18</text>
-<text xml:space="preserve" text-anchor="middle" x="99" y="-77.4" font-family="Noto Sans CJK SC" font-size="14.00">武汉中院开庭</text>
+<text xml:space="preserve" text-anchor="middle" x="99" y="-94.2" font-family="Noto Sans SC" font-size="14.00">2025&#45;09&#45;18</text>
+<text xml:space="preserve" text-anchor="middle" x="99" y="-77.4" font-family="Noto Sans SC" font-size="14.00">武汉中院开庭</text>
 </g>
 <!-- D&#45;&gt;E -->
 <g id="edge4" class="edge">
@@ -73,8 +73,8 @@
 <g id="node6" class="node">
 <title>F</title>
 <path fill="#f3f4f1" stroke="#738078" d="M186,-48C186,-48 12,-48 12,-48 6,-48 0,-42 0,-36 0,-36 0,-12 0,-12 0,-6 6,0 12,0 12,0 186,0 186,0 192,0 198,-6 198,-12 198,-12 198,-36 198,-36 198,-42 192,-48 186,-48"/>
-<text xml:space="preserve" text-anchor="middle" x="99" y="-28.2" font-family="Noto Sans CJK SC" font-size="14.00">2025&#45;12&#45;03</text>
-<text xml:space="preserve" text-anchor="middle" x="99" y="-11.4" font-family="Noto Sans CJK SC" font-size="14.00">武汉中院一审宣判</text>
+<text xml:space="preserve" text-anchor="middle" x="99" y="-28.2" font-family="Noto Sans SC" font-size="14.00">2025&#45;12&#45;03</text>
+<text xml:space="preserve" text-anchor="middle" x="99" y="-11.4" font-family="Noto Sans SC" font-size="14.00">武汉中院一审宣判</text>
 </g>
 <!-- E&#45;&gt;F -->
 <g id="edge5" class="edge">

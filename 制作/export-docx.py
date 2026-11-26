@@ -14,9 +14,14 @@ from docx.oxml import OxmlElement
 from docx.oxml.ns import qn
 from docx.opc.constants import RELATIONSHIP_TYPE as RT
 from PIL import Image
+import os
+
+# Font family names differ by platform: Linux 'Noto Serif CJK SC', Windows 'Noto Serif SC'.
+SERIF = os.environ.get('BOOK_SERIF', 'Noto Serif CJK SC')
+SANS = os.environ.get('BOOK_SANS', 'Noto Sans CJK SC')
 
 ROOT = Path.cwd()
-BOOK = json.loads((ROOT / 'tmp/book/book.json').read_text())
+BOOK = json.loads((ROOT / 'tmp/book/book.json').read_text(encoding='utf-8'))
 OUT = ROOT / '交付'
 OUT.mkdir(exist_ok=True)
 doc = Document()
@@ -26,7 +31,8 @@ sec.top_margin = sec.bottom_margin = Inches(.78)
 sec.left_margin = sec.right_margin = Inches(.8)
 sec.header_distance = sec.footer_distance = Inches(.35)
 
-def font_style(style, size, family='Noto Serif CJK SC'):
+def font_style(style, size, family=None):
+    family = family or SERIF
     style.font.name = family
     style.font.size = Pt(size)
     style.font.color.rgb = RGBColor(0, 0, 0)
@@ -36,6 +42,9 @@ def font_style(style, size, family='Noto Serif CJK SC'):
         fonts = OxmlElement('w:rFonts'); rpr.append(fonts)
     for key in ('ascii', 'hAnsi', 'eastAsia', 'cs'):
         fonts.set(qn('w:' + key), family)
+        # Theme attributes (e.g. eastAsiaTheme on headings) override the explicit
+        # family, and LibreOffice then falls back to MS Gothic / YaHei glyph by glyph.
+        fonts.attrib.pop(qn('w:' + key + 'Theme'), None)
 
 font_style(doc.styles['Normal'], 12)
 normal = doc.styles['Normal'].paragraph_format
@@ -43,7 +52,7 @@ normal.line_spacing = Pt(20)
 normal.space_after = Pt(6)
 normal.widow_control = True
 for name, size in [('Title', 26), ('Heading 1', 20), ('Heading 2', 15), ('Heading 3', 13)]:
-    font_style(doc.styles[name], size, 'Noto Sans CJK SC')
+    font_style(doc.styles[name], size, SANS)
     pf = doc.styles[name].paragraph_format
     pf.space_before = Pt(15); pf.space_after = Pt(9)
     pf.keep_with_next = True
@@ -181,7 +190,7 @@ def blocks(tokens):
         elif kind == 'code':
             if t.get('lang')=='mermaid': raise ValueError('Unrendered Mermaid')
             p=doc.add_paragraph(); p.paragraph_format.line_spacing=Pt(16)
-            r=p.add_run(t['text']); r.font.name='Noto Sans CJK SC'; r.font.size=Pt(10.5)
+            r=p.add_run(t['text']); r.font.name=SANS; r.font.size=Pt(10.5)
         elif kind == 'blockquote': blocks(t['tokens'])
         elif kind == 'list':
             start=t.get('start',1) or 1
@@ -210,8 +219,8 @@ for text in ['PAGE','NUMPAGES']:
 p=doc.add_paragraph('中国政治是怎么运转的',style='Title')
 p.paragraph_format.space_before=Pt(100)
 doc.add_paragraph('从制度、人物与现实事件读懂当代中国')
-doc.add_paragraph('第一版 1.1（2026年10月29日修订）')
-doc.add_paragraph('现实资料截止 2026年9月29日；少数后续变化以“v1.1补记”标出')
+doc.add_paragraph('第一版 1.2（2026年11月26日修订）')
+doc.add_paragraph('现实资料截止 2026年9月29日；少数后续变化以“v1.1补记”“v1.2补记”标出')
 doc.add_paragraph('本书通过真实人物和事件解释机构、程序与制度变化，帮助普通读者读懂新闻中的动作，并分清事实、解释和未知。')
 doc.add_paragraph('注释保留在各章末尾；正文中的编号可跳转到依据，注释中的“返回”可跳回首次引用。')
 doc.add_page_break()
@@ -240,7 +249,7 @@ doc.core_properties.subject='从制度、人物与现实事件读懂当代中国
 doc.core_properties.author=''
 doc.core_properties.last_modified_by=''
 doc.core_properties.language='zh-CN'
-doc.core_properties.comments='版本1.1，2026年10月29日修订；现实资料截止2026年9月29日，v1.1补记见附录F。'
+doc.core_properties.comments='版本1.2，2026年11月26日修订；现实资料截止2026年9月29日，v1.1、v1.2补记见附录F。'
 output=OUT/'中国政治是怎么运转的.docx'
 doc.save(output)
 print(json.dumps({'output':str(output),'sections':len(BOOK),'paragraphs':len(doc.paragraphs),'tables':len(doc.tables),'images':len(doc.inline_shapes)},ensure_ascii=False))
